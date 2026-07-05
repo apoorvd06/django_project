@@ -1,7 +1,15 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <h1 style="font-family: 'Playfair Display', serif; color: #6f42c1;">
-    Hiiii! Welcome to your profile, {{ user.username }} ✨
-</h1>
+    <div class="content-section">
+    <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url}}">
+        <div class="media-body">
+        <h2 class="account-heading style="font-family: 'Playfair Display', serif; color: #6f42c1;">Hiiii! Welcome to your profile, {{ user.username }} ✨</h2>
+        <p class="text-secondary">username@email.com</p>
+        </div>
+    </div>
+    <!-- FORM HERE -->
+    </div>
+    
 {% endblock content %}
