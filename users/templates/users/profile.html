@@ -11,17 +11,22 @@
     </div>
     <!-- FORM HERE -->
     <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Join Today</legend>
-            {% load crispy_forms_tags %} 
-            {{u_form|crispy}}
-            {{p_form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Update</button>
-        </div>
-    </form>
+    {% csrf_token %}
+    {% load crispy_forms_tags %}
+
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Update Profile</legend>
+
+        {{ u_form|crispy }}
+        {{ p_form|crispy }}
+    </fieldset>
+
+    <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">
+            Update
+        </button>
+    </div>
+</form>
     </div>
     
 {% endblock content %}
